@@ -30,7 +30,7 @@ const PropertyCard = ({ property }) => {
             <div className="p-4">
                 <div className="text-left md:text-center lg:text-left mb-6">
                     <div className="text-gray-600">{property.type}</div>
-                    <h3 className="text-xl font-bold">Boston Commons Retreat</h3>
+                    <h3 className="text-xl font-bold">{property.name}</h3>
                 </div>
                 <h3
                     className="absolute top-[10px] right-[10px] bg-white px-4 py-2 rounded-lg text-blue-500 font-bold text-right md:text-center lg:text-right"
@@ -71,7 +71,7 @@ const PropertyCard = ({ property }) => {
                         <span className="text-orange-700"> {property.location.city} {property.location.state} </span>
                     </div>
                     <Link
-                        href={`/properties/${property.id}`}
+                        href={`/properties/${property._id}`}
                         className="h-[36px] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-center text-sm"
                     >
                         Details
