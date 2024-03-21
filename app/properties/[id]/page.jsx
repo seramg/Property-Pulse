@@ -5,8 +5,8 @@ import { fetchPropertyById } from '@/utils/requests'
 import PropertyHeaderImage from '@/components/PropertyHeaderImage';
 import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
-import Loading from '@/app/loading';
 import PropertyDetails from '@/components/PropertyDetails';
+import Spinner from '@/components/Spinner';
 
 const PropertyPage = () => {
   const { id } = useParams();
@@ -33,7 +33,6 @@ const PropertyPage = () => {
 
   }, [id, property])
 
-  if (!property && loading) return <Loading />
 
   if (!property && !loading) {
     return <h1 className="text-center text-2xl mt-5 font-bold">Property not found</h1>
@@ -41,6 +40,7 @@ const PropertyPage = () => {
 
   return (
     <>
+      {loading && <Spinner loading={loading} />}
       {!loading && property &&
         <>
           <PropertyHeaderImage image={property.images[0]} />
