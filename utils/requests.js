@@ -6,14 +6,14 @@ const fetchProperties = async () => {
     try {
         if (!apiDomain) return []
 
-        const res = await fetch(`${apiDomain}/properties`)
+        const res = await fetch(`${apiDomain}/properties`, { cache: 'no-store' })
         if (!res.ok) {
             throw new Error('Failed to fetch data')
         }
         else {
             return res.json();
         }
-    } catch (error) { console.log(error); return [] }
+    } catch (error) { console.error(error); return [] }
 
 }
 
@@ -31,7 +31,7 @@ const fetchPropertyById = async (id) => {
         else {
             return res.json();
         }
-    } catch (error) { console.log(error); return null }
+    } catch (error) { console.error(error); return null }
 
 }
 

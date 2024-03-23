@@ -5,7 +5,6 @@ import HomeProperties from '@/components/HomeProperties'
 import connectDB from '@/config/database'
 
 const HomePage = async () => {
-console.log(process.env.MONGODB_URI)
   await connectDB();
 
   return (
