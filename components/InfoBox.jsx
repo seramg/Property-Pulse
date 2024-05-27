@@ -11,7 +11,7 @@ const InfoBox = ({ heading, backgroundColor = 'bg-gray-100', textColor = 'text-g
                 href={buttonInfo.link}
                 className={`inline-block ${buttonInfo.backgroundColor} text-white rounded-lg px-4 py-2 hover:opacity-80`}
             >
-                {buttonInfo.text}
+                {buttonInfo.text}x
             </a>
         </div>
     )
