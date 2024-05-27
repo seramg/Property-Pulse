@@ -75,7 +75,7 @@ const PropertyPage = () => {
                   <ShareButton property  = {property} />
 
                   {/* <!-- Contact Form --> */}
-                <PropertyContactForm />
+                <PropertyContactForm property={property}/>
                 </aside>
               </div>
             </div>

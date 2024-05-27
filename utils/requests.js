@@ -37,3 +37,4 @@ const fetchPropertyById = async (id) => {
 
 
 export { fetchProperties, fetchPropertyById };
+
